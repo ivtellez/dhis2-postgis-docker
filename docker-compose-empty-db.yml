@@ -2,7 +2,7 @@ version: '2.1'
 services:
  database:
    container_name: dhis2-database
-   image: itellez/postgis:11
+   image: itellez/postgis:11-2.51
    environment:
      POSTGRES_USER: dhis
      POSTGRES_DB: dhis
