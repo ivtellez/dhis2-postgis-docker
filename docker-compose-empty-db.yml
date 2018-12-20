@@ -9,6 +9,8 @@ services:
      POSTGRES_PASSWORD: dhis
      POSTGRES_DB_TARGET: dhis-target
      PG_DATA: /var/lib/postgresql/data/pgdata:z
+   volumes:
+    - 'db-dhis2:/var/lib/postgresql/data'
 #   ports:
 #    - "5432:5432"
    healthcheck:
@@ -31,3 +33,5 @@ services:
      test: "curl -f http://web:8080"
      interval: 30s
      retries: 150
+volumes:
+  db-dhis2:
